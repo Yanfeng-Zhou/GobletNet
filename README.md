@@ -1,24 +1,44 @@
 ﻿# GobletNet: Wavelet-Based High Frequency Fusion Network for Semantic Segmentation of Electron Microscopy Images
 
-This is the official code of [GobletNet: Wavelet-Based High Frequency Fusion Network for Semantic Segmentation of Electron Microscopy Images](https://) (TMI 2024.09).
+This is the official code of [GobletNet: Wavelet-Based High Frequency Fusion Network for Semantic Segmentation of Electron Microscopy Images](https://) (TMI 2024.10).
+
+ ***Using the characteristics of  segmented images to drive the architecture design is the simplest but most effective！***
 
 ## EM Image Characteristics
 
+We quantitatively analyze and summarize two characteristics of electron microscope (EM) images:
+- **Characteristic 1** Compared with other images, the HF components of EM images based on the wavelet transform have richer texture details and clearer object contours but also have more noise.
+- **Characteristic 2** For EM images, appropriately adding LF components to HF images can alleviate noise interference while maintaining sufficient HF details.
 
+<table> <tr> <td align="center"> <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Characteristic%201.png" alt="Image 1" width="45%"/><br/> Quantitative comparison of the HF information richness (HFIR), noise intensity (NI), and detail richness (DR) of datasets with different application scenarios, including natural, medical, microscopic and EM datasets. </td> <td align="center"> <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Characteristic%202.png" alt="Image 2" width="45%"/><br/> Quantitative comparison of the HF information richness (HFIR), noise intensity (NI), and detail richness (DR) of EM datasets with different LF weights. </td> </tr> </table>
+
+<p align="center">
+<img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Qualitative%20comparison%20of%20HF%20characteristics%20among%20natural%2C%20medical%2C%20microscopic%20and%20EM%20images.png" width="100%" >
+<br>Qualitative comparison of HF characteristics among natural, medical, microscopic and EM images. (a) Raw images. (b) Wavelet transform results. (c) HF images. (d) Information richness heatmaps. (e) Noise intensity heatmaps. (f) Detailed distribution heatmaps. (g) Detailed distribution heatmaps (overlaid on raw images). (h) Ground truth.
+</p>
 
 
 ## GobletNet
+<p align="center">
+<img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Overview.png" width="100%" >
+</p>
 
+- For **Characteristic 1**, we use the HF image as an extra input and use an extra encoder to extract the rich HF information in HF image. 
+- For **Characteristic 2**, we add LF components to HF image at a certain ratio to reduce the negative impact of excessive noise on model training.
 
 
 ## Quantitative Comparison
 <p align="center">
-<img src="https://github.com/Yanfeng-Zhou/Semi-Supervision_2.png" width="100%" >
+<img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Comparison%20results%20on%20EPFL%2C%20%20CREMI%2C%20SNEMI3D%20and%20UroCell.png" width="100%" >
+</p>
+<p align="center">
+<img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Comparison%20results%20on%20MitoEM%2C%20Nanowire%20and%20BetaSeg.png" width="100%" >
 </p>
 
 ## Qualitative Comparison
 <p align="center">
-<img src="https://github.com/Yanfeng-Zhou/Qualitative%20Comparison.png" width="100%" >
+<img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Qualitative%20Comparison.png" width="100%" >
+<br>(a) Raw images. (b) Ground truth. (c) SAM. (d) Deeplab V3+. (e) UNet 3+. (f) FusionNet. (g) WaveSNet. (h) UNet. (i) nnUNet. (j) GobletNet.
 </p>
 
 ## Reimplemented Architecture
