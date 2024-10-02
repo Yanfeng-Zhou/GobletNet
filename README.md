@@ -2,7 +2,7 @@
 
 This is the official code of [GobletNet: Wavelet-Based High Frequency Fusion Network for Semantic Segmentation of Electron Microscopy Images](https://) (TMI 2024.10).
 
- ***Using the characteristics of  segmented images to drive the architecture design is the simplest but most effective！***
+## :star::star::star: ***Using the characteristics of  segmented images to drive the architecture design is the simplest but most effective！***
 
 ## EM Image Characteristics
 
@@ -10,7 +10,7 @@ We quantitatively analyze and summarize two characteristics of electron microsco
 - **Characteristic 1** Compared with other images, the HF components of EM images based on the wavelet transform have richer texture details and clearer object contours but also have more noise.
 - **Characteristic 2** For EM images, appropriately adding LF components to HF images can alleviate noise interference while maintaining sufficient HF details.
 
-<table> <tr> <td align="center"> <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Characteristic%201.png" alt="Image 1" width="100%"/><br/> Quantitative comparison of the HF information richness (HFIR), noise intensity (NI), and detail richness (DR) of datasets with different application scenarios, including natural, medical, microscopic and EM datasets. </td> <td align="center"> <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Characteristic%202.png" alt="Image 2" width="100%"/><br/> Quantitative comparison of the HF information richness (HFIR), noise intensity (NI), and detail richness (DR) of EM datasets with different LF weights. &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td> </tr> </table>
+<table> <tr> <td align="center"> <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Characteristic%201.png" alt="Image 1" width="100%"/><br/> Quantitative comparison of the HF information richness (HFIR), noise intensity (NI), and detail richness (DR) of datasets with different application scenarios, including natural, medical, microscopic and EM datasets. </td> <td align="center"> <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Characteristic%202.png" alt="Image 2" width="100%"/><br/> Quantitative comparison of the HF information richness (HFIR), noise intensity (NI), and detail richness (DR) of EM datasets with different LF weights. &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td> </tr> </table>
 
 <p align="center">
 <img src="https://github.com/Yanfeng-Zhou/GobletNet/blob/main/figure/Qualitative%20comparison%20of%20HF%20characteristics%20among%20natural%2C%20medical%2C%20microscopic%20and%20EM%20images.png" width="100%" >
