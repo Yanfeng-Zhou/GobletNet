@@ -1,4 +1,4 @@
-from .unet import unet
+from .unet import unet, attention_unet
 from .unet_plusplus import unet_plusplus
 from .swinunet import swinunet
 from .resunet import res_unet

@@ -12,6 +12,8 @@ def get_network(network, in_channels, num_classes, **kwargs):
         net = unet(in_channels, num_classes)
     elif network == 'unet_plusplus' or network == 'unet++':
         net = unet_plusplus(in_channels, num_classes)
+    elif network == 'attunet':
+        net = attention_unet(in_channels, num_classes)
     elif network == 'resunet':
         net = res_unet(in_channels, num_classes)
     elif network == 'u2net':
